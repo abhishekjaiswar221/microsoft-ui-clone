@@ -1,9 +1,9 @@
-import { LaMenu } from "react-icons/lu";
+import { LuMenu } from "react-icons/lu";
 const FooterNavigation = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <LaMenu />
+      <LuMenu />
     </div>
   );
 };
