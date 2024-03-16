@@ -20,20 +20,20 @@ const HeaderNavigation = () => {
   return (
     <>
       {/* Navigation for mobile */}
-      <div className="block full-laptop:hidden">
+      <div className="block sm-laptop:hidden">
         <header>
-          <nav className="flex items-center border-b border-[#e6e6e6] justify-around full-tablet:justify-between full-tablet:px-5 w-full h-12 bg-white ">
+          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-12 bg-white ">
             <div className="flex items-center justify-center gap-5">
               <div onClick={toggleMenu}>
                 {/* Ternary Operator-->Condition ? True : False */}
                 {menuBar ? ( //condition
-                  <X size={20} strokeWidth={1.5} /> //true-->clicked
+                  <X size={18} strokeWidth={1.5} /> //true-->clicked
                 ) : (
-                  <Menu size={20} strokeWidth={1.5} /> //false-->not clicked
+                  <Menu size={18} strokeWidth={1.5} /> //false-->not clicked
                 )}
               </div>
               <div>
-                <Search size={20} strokeWidth={1.5} />
+                <Search size={18} strokeWidth={1.5} />
               </div>
             </div>
             <div>
@@ -45,7 +45,7 @@ const HeaderNavigation = () => {
             </div>
             <div className="flex items-center justify-center gap-5">
               <div>
-                <ShoppingCart size={20} strokeWidth={1.5} />
+                <ShoppingCart size={18} strokeWidth={1.5} />
               </div>
               <div>
                 <CircleUserRound size={30} strokeWidth={1} />
@@ -81,31 +81,31 @@ const HeaderNavigation = () => {
                 </li>
                 <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/software"}>Software</NavLink> */}Software
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
                 </li>
                 <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/pcdevices"}>PCs and Devices</NavLink> */}
                   PCs & Devices
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
                 </li>
                 <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/entertainment"}>Entertainment</NavLink> */}
                   Entertainment
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
                 </li>
                 <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/business"}>Business</NavLink> */}
                   Business
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
                 </li>
                 <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/developer"}>Developer & IT</NavLink> */}
                   Developer & IT
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
                 </li>
                 <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/other"}>Other</NavLink> */}Other
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
                 </li>
                 <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
                   {/* <NavLink to={"/sitemap"}>View Sitemap</NavLink> */}View
@@ -118,66 +118,78 @@ const HeaderNavigation = () => {
       </div>
 
       {/* Navigation for desktop */}
-      <div className="hidden full-laptop:block">
+      <div className="hidden sm-laptop:block">
         <header>
-          <nav className="flex items-center justify-around h-14 border-b border-[#e6e6e6]">
-            <div>
-              <img
-                className="h-[23px]"
-                src={microsoftLogo}
-                alt="Microsoft Logo"
-              />
-            </div>
-            <div>
-              <ul className="flex items-center justify-around gap-5">
-                <li>
-                  {/* <NavLink to={"/microsoft"}>Microsoft 365</NavLink> */}
-                  Microsoft 365
-                </li>
-                <li>{/* <NavLink to={"/teams"}>Teams</NavLink> */}Teams</li>
-                <li>
-                  {/* <NavLink to={"/copilot"}>Copilot</NavLink> */}Copilot
-                </li>
-                <li>
-                  {/* <NavLink to={"/windows"}>Windows</NavLink> */}Windows
-                </li>
-                <li>
-                  {/* <NavLink to={"/surface"}>Surface</NavLink> */}Surface
-                </li>
-                <li>{/* <NavLink to={"/xbox"}>X Box</NavLink> */}Xbox</li>
-                <li>
-                  {/* <NavLink to={"/support"}>Support</NavLink> */}Support
-                </li>
-              </ul>
+          <nav className="flex items-center justify-between px-10 lg-laptop:px-20 h-14 border-b border-[#e6e6e6]">
+            <div className="flex gap-8 lg-laptop:gap-10">
+              <div>
+                <img
+                  className="h-[23px]"
+                  src={microsoftLogo}
+                  alt="Microsoft Logo"
+                />
+              </div>
+              <div>
+                <ul className="flex items-center justify-around gap-5">
+                  <li>
+                    {/* <NavLink to={"/microsoft"}>Microsoft 365</NavLink> */}
+                    <span className="text-sm">Microsoft 365</span>
+                  </li>
+                  <li>
+                    {/* <NavLink to={"/teams"}>Teams</NavLink> */}
+                    <span className="text-sm">Teams</span>
+                  </li>
+                  <li>
+                    {/* <NavLink to={"/copilot"}>Copilot</NavLink> */}
+                    <span className="text-sm">Copilot</span>
+                  </li>
+                  <li>
+                    {/* <NavLink to={"/windows"}>Windows</NavLink> */}
+                    <span className="text-sm">Windows</span>
+                  </li>
+                  <li>
+                    {/* <NavLink to={"/surface"}>Surface</NavLink> */}
+                    <span className="text-sm">Surface</span>
+                  </li>
+                  <li>
+                    {/* <NavLink to={"/xbox"}>X Box</NavLink> */}
+                    <span className="text-sm">Xbox</span>
+                  </li>
+                  <li>
+                    {/* <NavLink to={"/support"}>Support</NavLink> */}
+                    <span className="text-sm">Support</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="flex items-center justify-center gap-4">
               <div className="flex items-center justify-center gap-1">
                 <div>
-                  <p>All Microsoft</p>
+                  <p className="text-sm">All Microsoft</p>
                 </div>
                 <div>
-                  <ChevronDown size={20} strokeWidth={1.5} />
+                  <ChevronDown size={18} strokeWidth={1.5} />
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-1 lg-laptop:gap-2">
+                <div className="hidden lg-laptop:block">
+                  <p className="text-sm">Search</p>
+                </div>
+                <div>
+                  <Search size={18} strokeWidth={1.5} />
                 </div>
               </div>
               <div className="flex items-center justify-center gap-1">
                 <div className="hidden lg-laptop:block">
-                  <p>Search</p>
+                  <p className="text-sm">Cart</p>
                 </div>
                 <div>
-                  <Search size={20} strokeWidth={1.5} />
+                  <ShoppingCart size={18} strokeWidth={1.5} />
                 </div>
               </div>
               <div className="flex items-center justify-center gap-1">
                 <div className="hidden lg-laptop:block">
-                  <p>Cart</p>
-                </div>
-                <div>
-                  <ShoppingCart size={20} strokeWidth={1.5} />
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-1">
-                <div className="hidden lg-laptop:block">
-                  <p>Sign in</p>
+                  <p className="text-sm">Sign in</p>
                 </div>
                 <div>
                   <CircleUserRound size={30} strokeWidth={1} />
