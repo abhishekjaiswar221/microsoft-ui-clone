@@ -22,7 +22,7 @@ const HeaderNavigation = () => {
       {/* Navigation for mobile */}
       <div className="block sm-laptop:hidden">
         <header>
-          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-12 bg-white ">
+          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-14 bg-white ">
             <div className="flex items-center justify-center gap-5">
               <div onClick={toggleMenu}>
                 {/* Ternary Operator-->Condition ? True : False */}
@@ -211,7 +211,7 @@ const HeaderNavigation = () => {
                   </li>
                   <li>
                     <NavLink className="text-sm" to={"/xbox"}>
-                      X Box
+                      Xbox
                     </NavLink>
                   </li>
                   <li>

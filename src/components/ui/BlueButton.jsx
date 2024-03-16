@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 // import { Component } from "react";
 
 //Function Based Component
-const Button = (props) => {
+const BlueButton = (props) => {
   // props-->{btnText}
   return (
     <div>
@@ -14,14 +14,14 @@ const Button = (props) => {
   );
 };
 //Default Props
-Button.defaultProps = {
+BlueButton.defaultProps = {
   btnText: "Microsoft Office",
 };
 //Prop Validation
-Button.propTypes = {
+BlueButton.propTypes = {
   btnText: PropTypes.string.isRequired,
 };
-export default Button;
+export default BlueButton;
 
 //Logic behind props object parameter passed to Button[Component]
 // const props = {
@@ -34,7 +34,7 @@ export default Button;
 // console.log(btnText);
 
 //Class Based Component
-// export default class Button extends Component {
+// export default class BlueButton extends Component {
 //  Default Props
 //   static defaultProps = {
 //     btnText: "Don't Learn More",

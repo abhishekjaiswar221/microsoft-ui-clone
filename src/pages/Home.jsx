@@ -1,7 +1,7 @@
 import CarouselCard from "../components/layout/CarouselCard";
 import HeaderNavigation from "../components/layout/HeaderNavigation";
-// import Button from "./components/ui/Button";
 import { CirclePause, ChevronLeft, ChevronRight, Circle } from "lucide-react";
+// import GrayButton from "../components/ui/GrayButton";
 
 const Home = () => {
   //   const changeCard = () => {
@@ -20,7 +20,7 @@ const Home = () => {
           "Tablet versatility and laptop power -- all in on single ultra - portable device"
         }
       />
-      <div className="flex flex-row items-center justify-center gap-5 h-14">
+      <div className="flex flex-row items-center justify-center gap-6 h-14">
         <div>
           <CirclePause size={24} strokeWidth={1.5} />
         </div>
@@ -37,6 +37,7 @@ const Home = () => {
           <ChevronRight size={24} strokeWidth={1.5} />
         </div>
       </div>
+      {/* <GrayButton btnText="Back to top" /> */}
     </>
   );
 };
