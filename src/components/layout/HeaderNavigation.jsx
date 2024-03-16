@@ -7,7 +7,7 @@ import {
   X,
   ChevronDown,
 } from "lucide-react";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import microsoftLogo from "../../assets/images/microsoft-logo.png";
 
 const HeaderNavigation = () => {
@@ -37,11 +37,13 @@ const HeaderNavigation = () => {
               </div>
             </div>
             <div>
-              <img
-                className="h-[23px]"
-                src={microsoftLogo}
-                alt="Microsoft Logo"
-              />
+              <picture>
+                <img
+                  className="h-[23px]"
+                  src={microsoftLogo}
+                  alt="Microsoft Logo"
+                />
+              </picture>
             </div>
             <div className="flex items-center justify-center gap-5">
               <div>
@@ -55,64 +57,113 @@ const HeaderNavigation = () => {
 
           {/* Conditional Rendering-->If menBar[State] in true then render the below code and if it's false then don't render */}
           {menuBar && (
-            <nav className="bg-[#f2f2f2] border-b border-black">
-              <ul className="flex flex-col">
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/microsoft"}>Microsoft 365</NavLink> */}
-                  Microsoft 365
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/teams"}>Teams</NavLink> */}Teams
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/copilot"}>Copilot</NavLink> */}Copilot
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/windows"}>Windows</NavLink> */}Windows
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/surface"}>Surface</NavLink> */}Surface
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/xbox"}>X Box</NavLink> */}Xbox
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/support"}>Support</NavLink> */}Support
-                </li>
-                <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/software"}>Software</NavLink> */}Software
-                  <ChevronDown size={18} strokeWidth={1.5} />
-                </li>
-                <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/pcdevices"}>PCs and Devices</NavLink> */}
-                  PCs & Devices
-                  <ChevronDown size={18} strokeWidth={1.5} />
-                </li>
-                <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/entertainment"}>Entertainment</NavLink> */}
-                  Entertainment
-                  <ChevronDown size={18} strokeWidth={1.5} />
-                </li>
-                <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/business"}>Business</NavLink> */}
-                  Business
-                  <ChevronDown size={18} strokeWidth={1.5} />
-                </li>
-                <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/developer"}>Developer & IT</NavLink> */}
-                  Developer & IT
-                  <ChevronDown size={18} strokeWidth={1.5} />
-                </li>
-                <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/other"}>Other</NavLink> */}Other
-                  <ChevronDown size={18} strokeWidth={1.5} />
-                </li>
-                <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                  {/* <NavLink to={"/sitemap"}>View Sitemap</NavLink> */}View
-                  Sitemap
-                </li>
-              </ul>
-            </nav>
+            <div className="absolute w-full top-12">
+              <nav className="bg-[#f2f2f2] border-b border-black">
+                <ul className="flex flex-col">
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/microsoft"}>
+                      Microsoft 365
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/teams"}>
+                      Teams
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/copilot"}>
+                      Copilot
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/windows"}>
+                      Windows
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/surface"}>
+                      Surface
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/xbox"}>
+                      Xbox
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/support"}>
+                      Support
+                    </NavLink>
+                  </li>
+                  <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <div>
+                      <NavLink className="text-sm" to={"/software"}>
+                        Software
+                      </NavLink>
+                    </div>
+                    <div>
+                      <ChevronDown size={18} strokeWidth={1.5} />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <div>
+                      <NavLink className="text-sm" to={"/pcdevices"}>
+                        PCs and Devices
+                      </NavLink>
+                    </div>
+                    <div>
+                      <ChevronDown size={18} strokeWidth={1.5} />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <div>
+                      <NavLink className="text-sm" to={"/entertainment"}>
+                        Entertainment
+                      </NavLink>
+                    </div>
+                    <div>
+                      <ChevronDown size={18} strokeWidth={1.5} />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <div>
+                      <NavLink className="text-sm" to={"/business"}>
+                        Business
+                      </NavLink>
+                    </div>
+                    <div>
+                      <ChevronDown size={18} strokeWidth={1.5} />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <div>
+                      <NavLink className="text-sm" to={"/developer"}>
+                        Developer & IT
+                      </NavLink>
+                    </div>
+                    <div>
+                      <ChevronDown size={18} strokeWidth={1.5} />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <div>
+                      <NavLink className="text-sm" to={"/other"}>
+                        Other
+                      </NavLink>
+                    </div>
+                    <div>
+                      <ChevronDown size={18} strokeWidth={1.5} />
+                    </div>
+                  </li>
+                  <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
+                    <NavLink className="text-sm" to={"/sitemap"}>
+                      View Sitemap
+                    </NavLink>
+                    View
+                  </li>
+                </ul>
+              </nav>
+            </div>
           )}
         </header>
       </div>
@@ -123,41 +174,50 @@ const HeaderNavigation = () => {
           <nav className="flex items-center justify-between px-10 lg-laptop:px-20 h-14 border-b border-[#e6e6e6]">
             <div className="flex gap-8 lg-laptop:gap-10">
               <div>
-                <img
-                  className="h-[23px]"
-                  src={microsoftLogo}
-                  alt="Microsoft Logo"
-                />
+                <picture>
+                  <img
+                    className="h-[23px]"
+                    src={microsoftLogo}
+                    alt="Microsoft Logo"
+                  />
+                </picture>
               </div>
               <div>
                 <ul className="flex items-center justify-around gap-5">
                   <li>
-                    {/* <NavLink to={"/microsoft"}>Microsoft 365</NavLink> */}
-                    <span className="text-sm">Microsoft 365</span>
+                    <NavLink className="text-sm" to={"/microsoft"}>
+                      Microsoft 365
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <NavLink to={"/teams"}>Teams</NavLink> */}
-                    <span className="text-sm">Teams</span>
+                    <NavLink className="text-sm" to={"/teams"}>
+                      Teams
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <NavLink to={"/copilot"}>Copilot</NavLink> */}
-                    <span className="text-sm">Copilot</span>
+                    <NavLink className="text-sm" to={"/copilot"}>
+                      Copilot
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <NavLink to={"/windows"}>Windows</NavLink> */}
-                    <span className="text-sm">Windows</span>
+                    <NavLink className="text-sm" to={"/windows"}>
+                      Windows
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <NavLink to={"/surface"}>Surface</NavLink> */}
-                    <span className="text-sm">Surface</span>
+                    <NavLink className="text-sm" to={"/surface"}>
+                      Surface
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <NavLink to={"/xbox"}>X Box</NavLink> */}
-                    <span className="text-sm">Xbox</span>
+                    <NavLink className="text-sm" to={"/xbox"}>
+                      X Box
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <NavLink to={"/support"}>Support</NavLink> */}
-                    <span className="text-sm">Support</span>
+                    <NavLink className="text-sm" to={"/support"}>
+                      Support
+                    </NavLink>
                   </li>
                 </ul>
               </div>

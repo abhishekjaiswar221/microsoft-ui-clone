@@ -6,7 +6,7 @@ const Button = (props) => {
   // props-->{btnText}
   return (
     <div>
-      <button className="bg-[#0067b8] text-white font-semibold w-fit py-[9px] px-3 rounded-sm">
+      <button className="bg-[#0067b8] text-white font-semibold py-2 px-4 rounded-sm">
         {props.btnText}
         {/* btnText */}
       </button>
@@ -47,7 +47,7 @@ export default Button;
 //   render() {
 //     return (
 //       <div>
-//         <button className="bg-[#0067b8] text-white font-semibold w-fit py-[9px] px-3 rounded-sm">
+//         <button className="bg-[#0067b8] text-white font-semibold p-2 rounded-sm">
 //           {this.props.btnText}
 //           {/* btnText */}
 //         </button>
