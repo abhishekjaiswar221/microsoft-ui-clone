@@ -11,7 +11,7 @@ export default {
       // "md-laptop": "1280px",
       "lg-laptop": "1399px",
       "xl-laptop": "1536px",
-      "4k-monitor": "2560px",
+      // "4k-monitor": "2560px",
     },
     extend: {},
   },

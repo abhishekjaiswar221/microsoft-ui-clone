@@ -16,7 +16,7 @@ const GrayButton = (props) => {
 };
 //Default Props
 GrayButton.defaultProps = {
-  btnText: "Microsoft Office",
+  btnText: "Back to top",
 };
 //Prop Validation
 GrayButton.propTypes = {
