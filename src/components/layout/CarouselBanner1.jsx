@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import BlueButton from "../ui/BlueButton";
 
-const CarouselBanner = ({ imgSrc, heading, desc }) => {
+const CarouselBanner1 = ({ imgSrc, heading, desc }) => {
   return (
     <div className="px-1">
       {/* CarouselBanner for sm-laptop(1024px) */}
@@ -54,9 +54,9 @@ const CarouselBanner = ({ imgSrc, heading, desc }) => {
     </div>
   );
 };
-CarouselBanner.propTypes = {
+CarouselBanner1.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };
-export default CarouselBanner;
+export default CarouselBanner1;

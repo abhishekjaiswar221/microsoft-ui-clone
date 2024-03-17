@@ -23,7 +23,7 @@ const CarouselBanner2 = ({ imgSrc, heading, desc }) => {
             <p>{desc}</p>
           </div>
           <div>
-            <BlueButton btnText={"Download the Copilot app"} />
+            <BlueButton btnText={"Get Microsoft Office 365 now"} />
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ const CarouselBanner2 = ({ imgSrc, heading, desc }) => {
                 <p className="text-base text-black">{desc}</p>
               </div>
               <div>
-                <BlueButton btnText={"Download the Copilot app"} />
+                <BlueButton btnText={"Get Microsoft Office 365 now"} />
               </div>
             </div>
           </div>
