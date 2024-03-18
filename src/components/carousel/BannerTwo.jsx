@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import BlueButton from "../ui/BlueButton";
 
-const CarouselBanner2 = ({ imgSrc, heading, desc }) => {
+const BannerTwo = ({ imgSrc, heading, desc }) => {
   return (
     <div className="px-1">
       {/* CarouselBanner for sm-laptop(1024px) */}
-      <div className="pb-5 md-mobile:pb-10 lg-mobile:pb-5 lg-tablet:pb-0 border border-[#e6e6e6] shadow-md lg-laptop:hidden">
+      <div className="pb-5 md-mobile:pb-10 lg-mobile:pb-5 lg-tablet:pb-0 border border-t-0 border-[#e6e6e6] shadow-md lg-laptop:hidden">
         <div>
           <picture>
             <img
@@ -30,7 +30,7 @@ const CarouselBanner2 = ({ imgSrc, heading, desc }) => {
 
       {/* CarouselBanner for lg-laptop(1399px) */}
       <div className="hidden lg-laptop:block">
-        <div className="flex border border-[#e6e6e6]">
+        <div className="flex border border-t-0 border-[#e6e6e6]">
           <div className="bg-[#c4e0fa]  w-[40%]">
             <div className="relative flex flex-col items-start justify-center gap-5 px-3 top-[140px] ms-12">
               <div>
@@ -54,9 +54,9 @@ const CarouselBanner2 = ({ imgSrc, heading, desc }) => {
     </div>
   );
 };
-CarouselBanner2.propTypes = {
+BannerTwo.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };
-export default CarouselBanner2;
+export default BannerTwo;

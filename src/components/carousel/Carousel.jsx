@@ -1,7 +1,8 @@
 import { useState } from "react";
-// import CarouselBanner1 from "../layout/CarouselBanner1";
-import CarouselBanner2 from "../layout/CarouselBanner2";
-import carouselImage from "../../assets/images/banner-img.png";
+// import BannerOne from "./BannerOne";
+import BannerTwo from "./BannerTwo";
+// import carouselImageMobile from "../../assets/images/banner-img1-mobile.avif";
+import carouselImage2 from "../../assets/images/banner-img2.png";
 import {
   CirclePause,
   ChevronLeft,
@@ -17,13 +18,9 @@ const Carousel = () => {
   //   };
   //   const [activeIndex, setActiveIndex] = useState(0);
 
-  const nextSlide = () => {
-    // setActiveIndex(1);
-  };
+  const nextSlide = () => {};
 
-  const prevSide = () => {
-    // setActiveIndex(1);
-  };
+  const prevSide = () => {};
 
   const [control, setControl] = useState(false);
   const carouselControl = () => {
@@ -31,18 +28,17 @@ const Carousel = () => {
   };
   return (
     <>
-      {/* https://blogs.windows.com/wp-content/uploads/prod/sites/43/2022/10/Pro-9-Colors1920-1600x900.jpg */}
-      {/* <CarouselBanner1
-        imgSrc={
-          "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-9-M1-Family-02-1:VP2-859x540"
-        }
+      {/* <BannerOne
+        key={control}
+        imgSrc={carouselImageMobile}
         heading={"Surface Pro 9"}
         desc={
           "Tablet versatility and laptop power -- all in on single ultra - portable device."
         }
       /> */}
-      <CarouselBanner2
-        imgSrc={carouselImage}
+      <BannerTwo
+        key={2}
+        imgSrc={carouselImage2}
         heading={"Unlock your potential with Microsoft Office 365"}
         desc={
           "Get things done faster and unleash your creativity with the power of AI in Microsoft 365 any where you go."
