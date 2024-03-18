@@ -90,39 +90,45 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="product-card1" className="mt-8">
-        <ProductCard
-          imgSrc={surfaceLaptop5}
-          heading={"Surface Laptop 5"}
-          desc={
-            "Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11."
-          }
-        />
-      </div>
-      <div id="product-card2" className="mt-8">
-        <ProductCard
-          imgSrc={surfaceStudio}
-          heading={"Surface Laptop Studio"}
-          desc={
-            "Flex your creative muscle on the most powerful Surface Laptop. Now available with Windows 11."
-          }
-        />
-      </div>
-      <div id="product-card3" className="mt-8">
-        <ProductCard
-          imgSrc={xboxSeriesX}
-          heading={"Xbox Series X"}
-          desc={"The fastest, most powerful Xbox ever."}
-        />
-      </div>
-      <div id="product-card4" className="mt-8">
-        <ProductCard
-          imgSrc={microsoftLifeStyle}
-          heading={"Maximise the everyday with Microsoft 365"}
-          desc={
-            "Get online protection, secure cloud storage and innovative apps designed to fit your needs – all in one plan."
-          }
-        />
+      <div className="flex flex-wrap items-center justify-center mt-8">
+        <div id="product-card1">
+          <ProductCard
+            imgSrc={surfaceLaptop5}
+            heading={"Surface Laptop 5"}
+            desc={
+              "Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11."
+            }
+            btnText="Learn more"
+          />
+        </div>
+        <div id="product-card2">
+          <ProductCard
+            imgSrc={surfaceStudio}
+            heading={"Surface Laptop Studio"}
+            desc={
+              "Flex your creative muscle on the most powerful Surface Laptop. Now available with Windows 11."
+            }
+            btnText="Learn more"
+          />
+        </div>
+        <div id="product-card3">
+          <ProductCard
+            imgSrc={xboxSeriesX}
+            heading={"Xbox Series X"}
+            desc={"The fastest, most powerful Xbox ever."}
+            btnText="Shop Xbox Series X"
+          />
+        </div>
+        <div id="product-card4">
+          <ProductCard
+            imgSrc={microsoftLifeStyle}
+            heading={"Maximise the everyday with Microsoft 365"}
+            desc={
+              "Get online protection, secure cloud storage and innovative apps designed to fit your needs – all in one plan."
+            }
+            btnText="For one Person"
+          />
+        </div>
       </div>
       {/* <GrayButton btnText="Back to top" /> */}
     </>
