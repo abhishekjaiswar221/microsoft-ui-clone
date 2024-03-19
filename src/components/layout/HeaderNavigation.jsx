@@ -22,7 +22,7 @@ const HeaderNavigation = () => {
       {/* Navigation for mobile */}
       <div className="block sm-laptop:hidden">
         <header>
-          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-12 bg-white ">
+          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-14 bg-white ">
             <div className="flex items-center justify-center gap-5">
               <div onClick={toggleMenu}>
                 {/* Ternary Operator-->Condition ? True : False */}
@@ -55,7 +55,7 @@ const HeaderNavigation = () => {
             </div>
           </nav>
 
-          {/* Conditional Rendering-->If menBar[State] in true then render the below code and if it's false then don't render */}
+          {/* Conditional Rendering using logical AND(&&)-->If menBar[State] in true then render the below code and if it's false then don't render */}
           {menuBar && (
             <div className="absolute w-full top-12">
               <nav className="bg-[#f2f2f2] border-b border-black">
@@ -211,7 +211,7 @@ const HeaderNavigation = () => {
                   </li>
                   <li>
                     <NavLink className="text-sm" to={"/xbox"}>
-                      X Box
+                      Xbox
                     </NavLink>
                   </li>
                   <li>
