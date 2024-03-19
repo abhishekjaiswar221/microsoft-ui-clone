@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
 import BlueButton from "../ui/BlueButton";
+import bannerImg from "../../assets/images/banner-img1.avif";
 
-const BannerOne = ({ imgSrc, heading, desc }) => {
+const BannerOne = () => {
   return (
     <div className="px-1">
       {/* CarouselBanner for sm-laptop(1024px) */}
@@ -10,17 +10,20 @@ const BannerOne = ({ imgSrc, heading, desc }) => {
           <picture>
             <img
               className="object-cover w-screen sm-laptop:h-[520px]"
-              src={imgSrc}
+              src={bannerImg}
               alt="Banner 1"
             />
           </picture>
         </div>
         <div className="flex flex-col justify-center gap-5 p-6 lg-tablet:gap-3 sm-laptop:gap-5">
           <div>
-            <h1 className="text-2xl font-medium">{heading}</h1>
+            <h1 className="text-2xl font-medium">Surface Pro 9</h1>
           </div>
           <div>
-            <p>{desc}</p>
+            <p>
+              Tablet versatility and laptop power -- all in on single ultra -
+              portable device.
+            </p>
           </div>
           <div>
             <BlueButton btnText={"Lean more"} />
@@ -33,16 +36,21 @@ const BannerOne = ({ imgSrc, heading, desc }) => {
         <div className="flex border border-t-0 border-[#e6e6e6]">
           <div className="w-[60%] h-[445px]  overflow-hidden">
             <picture>
-              <img className="object-cover" src={imgSrc} alt="Banner 1" />
+              <img className="object-cover" src={bannerImg} alt="Banner 1" />
             </picture>
           </div>
           <div className="bg-[#f2f2f2]  w-[40%]">
             <div className="relative flex flex-col items-start justify-center gap-5 px-3 top-[140px] me-12">
               <div>
-                <h1 className="text-4xl font-medium text-black">{heading}</h1>
+                <h1 className="text-4xl font-medium text-black">
+                  Surface Pro 9
+                </h1>
               </div>
               <div>
-                <p className="text-base text-black">{desc}</p>
+                <p className="text-base text-black">
+                  Tablet versatility and laptop power -- all in on single ultra
+                  - portable device.
+                </p>
               </div>
               <div>
                 <BlueButton btnText={"Lean more"} />
@@ -54,9 +62,5 @@ const BannerOne = ({ imgSrc, heading, desc }) => {
     </div>
   );
 };
-BannerOne.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-};
+
 export default BannerOne;

@@ -1,8 +1,6 @@
 import { useState } from "react";
 // import BannerOne from "./BannerOne";
 import BannerTwo from "./BannerTwo";
-// import carouselImageMobile from "../../assets/images/banner-img1-mobile.avif";
-import carouselImage2 from "../../assets/images/banner-img2.png";
 import {
   CirclePause,
   ChevronLeft,
@@ -28,22 +26,8 @@ const Carousel = () => {
   };
   return (
     <>
-      {/* <BannerOne
-        key={control}
-        imgSrc={carouselImageMobile}
-        heading={"Surface Pro 9"}
-        desc={
-          "Tablet versatility and laptop power -- all in on single ultra - portable device."
-        }
-      /> */}
-      <BannerTwo
-        key={2}
-        imgSrc={carouselImage2}
-        heading={"Unlock your potential with Microsoft Office 365"}
-        desc={
-          "Get things done faster and unleash your creativity with the power of AI in Microsoft 365 any where you go."
-        }
-      />
+      {/* <BannerOne /> */}
+      <BannerTwo />
       <div className="flex flex-row items-center justify-center gap-6 h-14">
         <div>
           {control ? (

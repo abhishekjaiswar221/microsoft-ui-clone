@@ -9,7 +9,11 @@ import surfaceLaptop5 from "../assets/images/surface-laptop-5.webp";
 import surfaceStudio from "../assets/images/surface-laptop-studio.jpg";
 import xboxSeriesX from "../assets/images/xbox-series-x.webp";
 import microsoftLifeStyle from "../assets/images/microsoft365-lifestyle.avif";
+import XboxSeriesS from "../components/ui/XboxSeriesS";
+
 const Home = () => {
+  const screenSize = window.matchMedia("width: 1399px");
+  screenSize.addEventListener("change", () => {});
   return (
     <>
       <div id="header-nav">
@@ -90,7 +94,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap items-center justify-center mt-8">
+      <div className="flex flex-wrap items-center justify-center gap-10 mt-8 lg-tablet:gap-6">
         <div id="product-card1">
           <ProductCard
             imgSrc={surfaceLaptop5}
@@ -124,11 +128,15 @@ const Home = () => {
             imgSrc={microsoftLifeStyle}
             heading={"Maximise the everyday with Microsoft 365"}
             desc={
-              "Get online protection, secure cloud storage and innovative apps designed to fit your needs – all in one plan."
+              "Get secure cloud storage and innovative apps – all in one plan."
             }
             btnText="For one Person"
           />
         </div>
+      </div>
+
+      <div>
+        <XboxSeriesS />
       </div>
       {/* <GrayButton btnText="Back to top" /> */}
     </>
