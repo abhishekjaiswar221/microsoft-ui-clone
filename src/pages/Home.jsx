@@ -1,15 +1,21 @@
 import Carousel from "../components/carousel/Carousel";
 import HeaderNavigation from "../components/layout/HeaderNavigation";
-// import GrayButton from "../components/ui/GrayButton";
+import FooterNavigation from "../components/layout/FooterNavigation";
+import { Facebook, Twitter, Youtube } from "lucide-react";
+import XboxSeriesS from "../components/ui/XboxSeriesS";
+import ProductCard from "../components/ui/ProductCard";
+import GrayButton from "../components/ui/GrayButton";
 import microsoftWindows from "../assets/svgs/microsoft-365.svg";
 import xboxGameConsole from "../assets/svgs/xbox-game-consoles.svg";
 import surfaceDevices from "../assets/svgs/surface-devices.svg";
-import ProductCard from "../components/ui/ProductCard";
 import surfaceLaptop5 from "../assets/images/surface-laptop-5.webp";
 import surfaceStudio from "../assets/images/surface-laptop-studio.jpg";
 import xboxSeriesX from "../assets/images/xbox-series-x.webp";
 import microsoftLifeStyle from "../assets/images/microsoft365-lifestyle.avif";
-import XboxSeriesS from "../components/ui/XboxSeriesS";
+import surfaceBusiness from "../assets/images/surface-business.avif";
+import microsoftTeams from "../assets/images/microsoft-teams.webp";
+import windowsBusiness from "../assets/images/windows11-business.jpg";
+import azureAi from "../assets/images/azure-ai.jpg";
 
 const Home = () => {
   const screenSize = window.matchMedia("width: 1399px");
@@ -94,7 +100,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-10 mt-8 lg-tablet:gap-6">
+
+      <div className="flex flex-wrap items-center justify-center gap-10 my-8 lg-tablet:gap-6">
         <div id="product-card1">
           <ProductCard
             imgSrc={surfaceLaptop5}
@@ -138,7 +145,73 @@ const Home = () => {
       <div>
         <XboxSeriesS />
       </div>
-      {/* <GrayButton btnText="Back to top" /> */}
+
+      <div className="flex flex-wrap items-center justify-center gap-10 my-8 lg-tablet:gap-6">
+        <div id="product-card1">
+          <ProductCard
+            imgSrc={surfaceBusiness}
+            heading={"Surface for Business"}
+            desc={"No matter what you do, there’s a Surface to help you do it."}
+            btnText="Shop now"
+          />
+        </div>
+        <div id="product-card2">
+          <ProductCard
+            imgSrc={microsoftTeams}
+            heading={"Get Microsoft Teams for free"}
+            desc={
+              "Online meetings, chat and shared cloud storage – all in one place."
+            }
+            btnText="Sign up for free"
+          />
+        </div>
+        <div id="product-card3">
+          <ProductCard
+            imgSrc={windowsBusiness}
+            heading={"Windows 11 for business"}
+            desc={
+              "Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all."
+            }
+            btnText="Learn more"
+          />
+        </div>
+        <div id="product-card4">
+          <ProductCard
+            imgSrc={azureAi}
+            heading={"Join the era of AI"}
+            desc={
+              "Create, communicate, and code with the latest Microsoft AI solutions."
+            }
+            btnText="Explore AI Solutions"
+          />
+        </div>
+      </div>
+
+      {/* Social Contacts */}
+      <div className="mx-3 lg-mobile:mx-4 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px]">
+        <div>
+          <p>Follow Microsoft</p>
+        </div>
+        <div className="flex flex-row gap-5">
+          <div>
+            <Facebook size={26} strokeWidth={2} />
+          </div>
+          <div>
+            <Twitter size={26} strokeWidth={2} />
+          </div>
+          <div>
+            <Youtube size={26} strokeWidth={2} />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex items-center justify-end my-5 mx-3 lg-mobile:mx-4 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px]">
+        <GrayButton btnText="Back to top" />
+      </div>
+
+      <div>
+        <FooterNavigation />
+      </div>
     </>
   );
 };

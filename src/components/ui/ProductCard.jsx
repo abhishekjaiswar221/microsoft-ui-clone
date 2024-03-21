@@ -4,7 +4,7 @@ import BlueButton from "./BlueButton";
 const ProductCard = ({ imgSrc, heading, desc, btnText }) => {
   return (
     <>
-      <div className="border border-[#e6e6e6] mx-2 lg-tablet:mx-0 md-mobile:mx-3 shadow-md w-[301px] md-mobile:w-[350px] lg-mobile:w-[400px] lg-mobile:h-[465px] lg-tablet:w-[350px] sm-laptop:w-[465px] sm-laptop:h-[480px] lg-laptop:w-[320px] lg-laptop:h-[435px] h-[435px]">
+      <div className="border border-[#e6e6e6] mx-2 lg-tablet:mx-0 md-mobile:mx-3 shadow-md w-[301px] md-mobile:w-[350px] lg-mobile:w-[400px] lg-mobile:h-[465px] lg-tablet:w-[350px] sm-laptop:w-[465px] sm-laptop:h-[480px] lg-laptop:w-[308px] lg-laptop:h-[435px] h-[435px]">
         <div>
           <picture>
             <img className="w-full" src={imgSrc} alt="Surface Laptop 5" />

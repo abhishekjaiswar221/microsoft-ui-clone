@@ -1,9 +1,9 @@
-import { LuMenu } from "react-icons/lu";
+import { Menu } from "lucide-react";
 const FooterNavigation = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <LuMenu />
+      <Menu />
     </div>
   );
 };
