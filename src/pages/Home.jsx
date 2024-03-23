@@ -22,12 +22,19 @@ const Home = () => {
   screenSize.addEventListener("change", () => {});
   return (
     <>
+      {/* Header Navigation */}
       <div id="header-nav">
         <HeaderNavigation />
       </div>
+      {/* Header Navigation */}
+
+      {/* Carousel Banner */}
       <div id="carousel-banner">
         <Carousel />
       </div>
+      {/* Carousel Banner */}
+
+      {/* Product Links */}
       <div id="product-links" className="flex items-center justify-center">
         <div className="flex flex-wrap items-center justify-center gap-8 w-60 mt-7 lg-mobile:w-fit">
           <div className="flex flex-col items-center justify-center gap-4">
@@ -100,7 +107,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Product Links */}
 
+      {/* Product Cards */}
       <div className="flex flex-wrap items-center justify-center gap-10 my-8 lg-tablet:gap-6">
         <div id="product-card1">
           <ProductCard
@@ -141,54 +150,66 @@ const Home = () => {
           />
         </div>
       </div>
+      {/* Product Cards */}
 
+      {/* Xbox Card */}
       <div>
         <XboxSeriesS />
       </div>
+      {/* Xbox Card */}
 
-      <div className="flex flex-wrap items-center justify-center gap-10 my-8 lg-tablet:gap-6">
-        <div id="product-card1">
-          <ProductCard
-            imgSrc={surfaceBusiness}
-            heading={"Surface for Business"}
-            desc={"No matter what you do, there’s a Surface to help you do it."}
-            btnText="Shop now"
-          />
-        </div>
-        <div id="product-card2">
-          <ProductCard
-            imgSrc={microsoftTeams}
-            heading={"Get Microsoft Teams for free"}
-            desc={
-              "Online meetings, chat and shared cloud storage – all in one place."
-            }
-            btnText="Sign up for free"
-          />
-        </div>
-        <div id="product-card3">
-          <ProductCard
-            imgSrc={windowsBusiness}
-            heading={"Windows 11 for business"}
-            desc={
-              "Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all."
-            }
-            btnText="Learn more"
-          />
-        </div>
-        <div id="product-card4">
-          <ProductCard
-            imgSrc={azureAi}
-            heading={"Join the era of AI"}
-            desc={
-              "Create, communicate, and code with the latest Microsoft AI solutions."
-            }
-            btnText="Explore AI Solutions"
-          />
+      {/* Business Product Cards */}
+      <div>
+        <h1 className="mx-2 mt-8 mb-5 text-2xl font-semibold lg-tablet:mx-5 sm-laptop:mx-8 lg-laptop:mx-[52px] md-mobile:mx-3">
+          For business
+        </h1>
+        <div className="flex flex-wrap items-center justify-center gap-10 lg-tablet:gap-6">
+          <div id="product-card1">
+            <ProductCard
+              imgSrc={surfaceBusiness}
+              heading={"Surface for Business"}
+              desc={
+                "No matter what you do, there’s a Surface to help you do it."
+              }
+              btnText="Shop now"
+            />
+          </div>
+          <div id="product-card2">
+            <ProductCard
+              imgSrc={microsoftTeams}
+              heading={"Get Microsoft Teams for free"}
+              desc={
+                "Online meetings, chat and shared cloud storage – all in one place."
+              }
+              btnText="Sign up for free"
+            />
+          </div>
+          <div id="product-card3">
+            <ProductCard
+              imgSrc={windowsBusiness}
+              heading={"Windows 11 for business"}
+              desc={
+                "Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all."
+              }
+              btnText="Learn more"
+            />
+          </div>
+          <div id="product-card4">
+            <ProductCard
+              imgSrc={azureAi}
+              heading={"Join the era of AI"}
+              desc={
+                "Create, communicate, and code with the latest Microsoft AI solutions."
+              }
+              btnText="Explore AI Solutions"
+            />
+          </div>
         </div>
       </div>
+      {/* Business Product Cards */}
 
       {/* Social Contacts */}
-      <div className="mx-3 lg-mobile:mx-4 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px]">
+      <div className="mx-3 lg-mobile:mx-4 md-mobile:flex-row flex flex-col gap-3 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px] my-14">
         <div>
           <p>Follow Microsoft</p>
         </div>
@@ -204,14 +225,19 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Social Contacts */}
 
+      {/* Back to top button */}
       <div className="flex items-center justify-end my-5 mx-3 lg-mobile:mx-4 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px]">
         <GrayButton btnText="Back to top" />
       </div>
+      {/* Back to top button */}
 
+      {/* Footer Navigation */}
       <div>
         <FooterNavigation />
       </div>
+      {/* Footer Navigation */}
     </>
   );
 };
