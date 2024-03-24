@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import {
   Search,
   Menu,
@@ -10,7 +11,7 @@ import {
 import { NavLink } from "react-router-dom";
 import microsoftLogo from "../../assets/images/microsoft-logo.png";
 
-const HeaderNavigation = () => {
+const HeaderNavigation = ({ showSearch }) => {
   const [menuBar, setMenuBar] = useState(false);
 
   const toggleMenu = () => {
@@ -22,7 +23,7 @@ const HeaderNavigation = () => {
       {/* Navigation for mobile */}
       <div className="block sm-laptop:hidden">
         <header>
-          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-14 bg-white ">
+          <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-14 bg-white">
             <div className="flex items-center justify-center gap-5">
               <div onClick={toggleMenu}>
                 {/* Ternary Operator-->Condition ? True : False */}
@@ -33,7 +34,7 @@ const HeaderNavigation = () => {
                 )}
               </div>
               <div>
-                <Search size={18} strokeWidth={1.5} />
+                <Search onClick={showSearch} size={18} strokeWidth={1.5} />
               </div>
             </div>
             <div>
@@ -61,43 +62,67 @@ const HeaderNavigation = () => {
               <nav className="bg-[#f2f2f2] border-b border-black">
                 <ul className="flex flex-col">
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/microsoft"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/microsoft"}
+                    >
                       Microsoft 365
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/teams"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/teams"}
+                    >
                       Teams
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/copilot"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/copilot"}
+                    >
                       Copilot
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/windows"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/windows"}
+                    >
                       Windows
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/surface"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/surface"}
+                    >
                       Surface
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/xbox"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/xbox"}
+                    >
                       Xbox
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/support"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/support"}
+                    >
                       Support
                     </NavLink>
                   </li>
                   <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                     <div>
-                      <NavLink className="text-sm" to={"/software"}>
+                      <NavLink
+                        className="text-sm hover:underline hover:decoration-2"
+                        to={"/software"}
+                      >
                         Software
                       </NavLink>
                     </div>
@@ -107,7 +132,10 @@ const HeaderNavigation = () => {
                   </li>
                   <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                     <div>
-                      <NavLink className="text-sm" to={"/pcdevices"}>
+                      <NavLink
+                        className="text-sm hover:underline hover:decoration-2"
+                        to={"/pcdevices"}
+                      >
                         PCs and Devices
                       </NavLink>
                     </div>
@@ -117,7 +145,10 @@ const HeaderNavigation = () => {
                   </li>
                   <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                     <div>
-                      <NavLink className="text-sm" to={"/entertainment"}>
+                      <NavLink
+                        className="text-sm hover:underline hover:decoration-2"
+                        to={"/entertainment"}
+                      >
                         Entertainment
                       </NavLink>
                     </div>
@@ -127,7 +158,10 @@ const HeaderNavigation = () => {
                   </li>
                   <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                     <div>
-                      <NavLink className="text-sm" to={"/business"}>
+                      <NavLink
+                        className="text-sm hover:underline hover:decoration-2"
+                        to={"/business"}
+                      >
                         Business
                       </NavLink>
                     </div>
@@ -137,7 +171,10 @@ const HeaderNavigation = () => {
                   </li>
                   <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                     <div>
-                      <NavLink className="text-sm" to={"/developer"}>
+                      <NavLink
+                        className="text-sm hover:underline hover:decoration-2"
+                        to={"/developer"}
+                      >
                         Developer & IT
                       </NavLink>
                     </div>
@@ -147,7 +184,10 @@ const HeaderNavigation = () => {
                   </li>
                   <li className="flex items-center justify-between w-full px-5 border-b border-[#e6e6e6] h-14">
                     <div>
-                      <NavLink className="text-sm" to={"/other"}>
+                      <NavLink
+                        className="text-sm hover:underline hover:decoration-2"
+                        to={"/other"}
+                      >
                         Other
                       </NavLink>
                     </div>
@@ -156,7 +196,10 @@ const HeaderNavigation = () => {
                     </div>
                   </li>
                   <li className="flex items-center justify-start w-full px-5 border-b border-[#e6e6e6] h-14">
-                    <NavLink className="text-sm" to={"/sitemap"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/sitemap"}
+                    >
                       View Sitemap
                     </NavLink>
                     View
@@ -185,37 +228,58 @@ const HeaderNavigation = () => {
               <div>
                 <ul className="flex items-center justify-around gap-5">
                   <li>
-                    <NavLink className="text-sm" to={"/microsoft"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/microsoft"}
+                    >
                       Microsoft 365
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="text-sm" to={"/teams"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/teams"}
+                    >
                       Teams
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="text-sm" to={"/copilot"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/copilot"}
+                    >
                       Copilot
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="text-sm" to={"/windows"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/windows"}
+                    >
                       Windows
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="text-sm" to={"/surface"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/surface"}
+                    >
                       Surface
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="text-sm" to={"/xbox"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/xbox"}
+                    >
                       Xbox
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="text-sm" to={"/support"}>
+                    <NavLink
+                      className="text-sm hover:underline hover:decoration-2"
+                      to={"/support"}
+                    >
                       Support
                     </NavLink>
                   </li>
@@ -225,7 +289,9 @@ const HeaderNavigation = () => {
             <div className="flex items-center justify-center gap-4">
               <div className="flex items-center justify-center gap-1">
                 <div>
-                  <p className="text-sm">All Microsoft</p>
+                  <p className="text-sm hover:underline hover:decoration-2">
+                    All Microsoft
+                  </p>
                 </div>
                 <div>
                   <ChevronDown size={18} strokeWidth={1.5} />
@@ -233,7 +299,9 @@ const HeaderNavigation = () => {
               </div>
               <div className="flex items-center justify-center gap-1 lg-laptop:gap-2">
                 <div className="hidden lg-laptop:block">
-                  <p className="text-sm">Search</p>
+                  <p className="text-sm hover:underline hover:decoration-2">
+                    Search
+                  </p>
                 </div>
                 <div>
                   <Search size={18} strokeWidth={1.5} />
@@ -241,7 +309,9 @@ const HeaderNavigation = () => {
               </div>
               <div className="flex items-center justify-center gap-1">
                 <div className="hidden lg-laptop:block">
-                  <p className="text-sm">Cart</p>
+                  <p className="text-sm hover:underline hover:decoration-2">
+                    Cart
+                  </p>
                 </div>
                 <div>
                   <ShoppingCart size={18} strokeWidth={1.5} />
@@ -249,7 +319,9 @@ const HeaderNavigation = () => {
               </div>
               <div className="flex items-center justify-center gap-1">
                 <div className="hidden lg-laptop:block">
-                  <p className="text-sm">Sign in</p>
+                  <p className="text-sm hover:underline hover:decoration-2">
+                    Sign in
+                  </p>
                 </div>
                 <div>
                   <CircleUserRound size={30} strokeWidth={1} />
@@ -261,5 +333,8 @@ const HeaderNavigation = () => {
       </div>
     </>
   );
+};
+HeaderNavigation.propTypes = {
+  showSearch: PropTypes.func.isRequired,
 };
 export default HeaderNavigation;

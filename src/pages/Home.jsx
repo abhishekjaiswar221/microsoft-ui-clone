@@ -16,15 +16,44 @@ import surfaceBusiness from "../assets/images/surface-business.avif";
 import microsoftTeams from "../assets/images/microsoft-teams.webp";
 import windowsBusiness from "../assets/images/windows11-business.jpg";
 import azureAi from "../assets/images/azure-ai.jpg";
+import SearchBar from "../components/ui/SearchBar";
 
 const Home = () => {
-  const screenSize = window.matchMedia("width: 1399px");
-  screenSize.addEventListener("change", () => {});
+  const showSearchBar = () => {
+    let hideNav = document.getElementById("header-nav");
+    hideNav.className = "hidden";
+    let showSearch = document.getElementById("search-bar");
+    showSearch.className = "block";
+  };
+
+  const hideSearchBar = () => {
+    let hideSearch = document.getElementById("search-bar");
+    hideSearch.className = "hidden";
+    let showNav = document.getElementById("header-nav");
+    showNav.className = "block";
+  };
+
+  var mediaQuery = window.matchMedia("(min-width: 1024px)");
+  const myFunction = (mediaQuery) => {
+    if (mediaQuery.matches) {
+      let hideSearch = document.getElementById("search-bar");
+      hideSearch.className = "hidden";
+      let showNav = document.getElementById("header-nav");
+      showNav.className = "block";
+    }
+  };
+  mediaQuery.addEventListener("change", () => {
+    myFunction(mediaQuery);
+  });
+
   return (
     <>
       {/* Header Navigation */}
       <div id="header-nav">
-        <HeaderNavigation />
+        <HeaderNavigation showSearch={showSearchBar} />
+      </div>
+      <div className="hidden" id="search-bar">
+        <SearchBar hideSearch={hideSearchBar} />
       </div>
       {/* Header Navigation */}
 
@@ -35,8 +64,11 @@ const Home = () => {
       {/* Carousel Banner */}
 
       {/* Product Links */}
-      <div id="product-links" className="flex items-center justify-center">
-        <div className="flex flex-wrap items-center justify-center gap-8 w-60 mt-7 lg-mobile:w-fit">
+      <div
+        id="product-links"
+        className="flex items-center justify-center my-16"
+      >
+        <div className="flex flex-wrap items-center justify-center gap-8 w-60 lg-mobile:w-fit">
           <div className="flex flex-col items-center justify-center gap-4">
             <picture>
               <img
@@ -209,7 +241,7 @@ const Home = () => {
       {/* Business Product Cards */}
 
       {/* Social Contacts */}
-      <div className="mx-3 lg-mobile:mx-4 md-mobile:flex-row flex flex-col gap-3 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px] my-14">
+      <div className="mx-3 lg-mobile:mx-4 md-mobile:flex-row flex flex-col gap-3 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px] mt-16 mb-10">
         <div>
           <p>Follow Microsoft</p>
         </div>
@@ -228,7 +260,7 @@ const Home = () => {
       {/* Social Contacts */}
 
       {/* Back to top button */}
-      <div className="flex items-center justify-end my-5 mx-3 lg-mobile:mx-4 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px]">
+      <div className="flex items-center justify-end mb-16 mx-3 lg-mobile:mx-4 lg-tablet:mx-6 sm-laptop:mx-9 lg-laptop:mx-[70px]">
         <GrayButton btnText="Back to top" />
       </div>
       {/* Back to top button */}

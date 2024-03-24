@@ -1,8 +1,9 @@
 import { Copyright, Earth } from "lucide-react";
+import privacyChoices from "../../assets/svgs/privacy-choices.svg";
 
 const FooterNavigation = () => {
   return (
-    <div className="bg-[#f2f2f2] py-6 flex flex-col gap-10">
+    <div className="bg-[#f2f2f2] py-7 flex flex-col gap-10">
       <div className="flex flex-row flex-wrap justify-start mx-8 space-y-8 lg-tablet:space-y-0 lg-laptop:mx-10 lg-laptop:justify-around">
         <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] sm-laptop:w-[320px] lg-laptop:w-fit">
           <div>
@@ -11,7 +12,7 @@ const FooterNavigation = () => {
             </h1>
           </div>
           <div>
-            <ul className="flex flex-col gap-4 text-sm text-[#616161]">
+            <ul className="flex flex-col gap-4 text-xs text-[#616161]">
               <li>Games</li>
               <li>Surface 9 Pro</li>
               <li>Surface Laptop 5</li>
@@ -29,7 +30,7 @@ const FooterNavigation = () => {
             </h1>
           </div>
           <div>
-            <ul className="flex flex-col gap-4 text-sm text-[#616161]">
+            <ul className="flex flex-col gap-4 text-xs text-[#616161]">
               <li>Account Profile</li>
               <li>Download Center</li>
               <li>Microsoft Store Support</li>
@@ -45,7 +46,7 @@ const FooterNavigation = () => {
             </h1>
           </div>
           <div>
-            <ul className="flex flex-col gap-4 text-sm text-[#616161]">
+            <ul className="flex flex-col gap-4 text-xs text-[#616161]">
               <li>Microsoft in education</li>
               <li>Devices for education</li>
               <li>Microsoft Teams for Education</li>
@@ -57,12 +58,12 @@ const FooterNavigation = () => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] lg-tablet:pt-7 sm-laptop:w-[320px] lg-laptop:w-fit">
+        <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] lg-tablet:pt-7 lg-laptop:pt-0 sm-laptop:w-[320px] lg-laptop:w-fit">
           <div>
             <h1 className="text-base font-semibold text-[#616161]">Business</h1>
           </div>
           <div>
-            <ul className="flex flex-col gap-4 text-sm text-[#616161]">
+            <ul className="flex flex-col gap-4 text-xs text-[#616161]">
               <li>Microsoft Cloud</li>
               <li>Microsoft Security</li>
               <li>Azure</li>
@@ -74,14 +75,14 @@ const FooterNavigation = () => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] lg-tablet:pt-7 sm-laptop:w-[320px] lg-laptop:w-fit">
+        <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] lg-tablet:pt-7 lg-laptop:pt-0 sm-laptop:w-[320px] lg-laptop:w-fit">
           <div>
             <h1 className="text-base font-semibold text-[#616161]">
               Developer & IT
             </h1>
           </div>
           <div>
-            <ul className="flex flex-col gap-4 text-sm text-[#616161]">
+            <ul className="flex flex-col gap-4 text-xs text-[#616161]">
               <li>Developer Center</li>
               <li>Documentation</li>
               <li>Microsoft Learn</li>
@@ -93,12 +94,12 @@ const FooterNavigation = () => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] lg-tablet:pt-7 sm-laptop:w-[320px] lg-laptop:w-fit">
+        <div className="flex flex-col w-full gap-4 lg-tablet:w-[234px] lg-tablet:pt-7 lg-laptop:pt-0 sm-laptop:w-[320px] lg-laptop:w-fit">
           <div>
             <h1 className="text-base font-semibold text-[#616161]">Company</h1>
           </div>
           <div>
-            <ul className="flex flex-col gap-4 text-sm text-[#616161]">
+            <ul className="flex flex-col gap-4 text-xs text-[#616161]">
               <li>Careers</li>
               <li>About Microsoft</li>
               <li>Company news</li>
@@ -111,20 +112,21 @@ const FooterNavigation = () => {
         </div>
       </div>
       <div className="flex flex-col flex-wrap justify-between gap-5 px-8 lg-tablet:flex-row lg-laptop:px-20">
-        <div className="flex flex-col sm-laptop:flex-row gap-2 text-sm text-[#616161]">
-          <div className="flex flex-row gap-1">
+        <div className="flex flex-col sm-laptop:flex-row gap-2 text-xs text-[#616161]">
+          <div className="flex flex-row gap-1 sm-laptop:items-center sm-laptop:justify-center">
             <span>
               <Earth size={20} strokeWidth={1.5} />
             </span>
             <p>English(India)</p>
           </div>
 
-          <div>
+          <div className="flex flex-row gap-1 sm-laptop:items-center sm-laptop:justify-center">
+            <img className="w-8" src={privacyChoices} alt="Privacy Choices" />
             <p>Your Privacy Choices</p>
           </div>
         </div>
-        <div>
-          <ul className="flex flex-row flex-wrap gap-2 lg-laptop:gap-8 text-sm text-[#616161]">
+        <div className="flex items-center justify-center">
+          <ul className="flex flex-row flex-wrap gap-2 lg-laptop:gap-8 text-xs text-[#616161]">
             <li>Contact Microsoft</li>
             <li>Privacy</li>
             <li>Terms of use</li>
