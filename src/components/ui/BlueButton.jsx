@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 // import { Component } from "react";
 
-//Function Based Component
+//Function-Based Component
 const BlueButton = (props) => {
   // props-->{btnText}
   return (
@@ -33,7 +33,7 @@ export default BlueButton;
 // const { btnText } = props;
 // console.log(btnText);
 
-//Class Based Component
+//Class-Based Component
 // export default class BlueButton extends Component {
 //  Default Props
 //   static defaultProps = {

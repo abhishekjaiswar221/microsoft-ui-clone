@@ -33,8 +33,8 @@ const Home = () => {
     showNav.className = "block";
   };
 
-  var mediaQuery = window.matchMedia("(min-width: 1024px)");
-  const myFunction = (mediaQuery) => {
+  let mediaQuery = window.matchMedia("(min-width: 1024px)");
+  const hideNavigation = () => {
     if (mediaQuery.matches) {
       let hideSearch = document.getElementById("search-bar");
       hideSearch.className = "hidden";
@@ -43,7 +43,7 @@ const Home = () => {
     }
   };
   mediaQuery.addEventListener("change", () => {
-    myFunction(mediaQuery);
+    hideNavigation();
   });
 
   return (

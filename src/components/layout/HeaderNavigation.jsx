@@ -10,12 +10,17 @@ import {
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import microsoftLogo from "../../assets/images/microsoft-logo.png";
+import Dropdown from "../ui/Dropdown";
 
 const HeaderNavigation = ({ showSearch }) => {
   const [menuBar, setMenuBar] = useState(false);
 
   const toggleMenu = () => {
-    setMenuBar(!menuBar); // Toggle the value of menuBar[State]-->If true then ~true-->false if false  then ~false-->true
+    setMenuBar(!menuBar); // Toggle the value of menuBar[State]-->If true then ~true-->false if false then ~false-->true
+  };
+  const [dropdown, setDropDown] = useState(false);
+  const showDropdown = () => {
+    setDropDown(!dropdown);
   };
 
   return (
@@ -26,7 +31,7 @@ const HeaderNavigation = ({ showSearch }) => {
           <nav className="flex items-center border-b border-[#e6e6e6] justify-around lg-tablet:justify-between lg-tablet:px-5 w-full h-14 bg-white">
             <div className="flex items-center justify-center gap-5">
               <div onClick={toggleMenu}>
-                {/* Ternary Operator-->Condition ? True : False */}
+                {/* Ternary Operator-->Condition? True: False */}
                 {menuBar ? ( //condition
                   <X size={18} strokeWidth={1.5} /> //true-->clicked
                 ) : (
@@ -287,43 +292,49 @@ const HeaderNavigation = ({ showSearch }) => {
               </div>
             </div>
             <div className="flex items-center justify-center gap-4">
-              <div className="flex items-center justify-center gap-1">
+              <div
+                className="flex items-center justify-center gap-1"
+                onClick={showDropdown}
+              >
                 <div>
-                  <p className="text-sm hover:underline hover:decoration-2">
+                  <p className="text-sm cursor-pointer hover:underline hover:decoration-2">
                     All Microsoft
                   </p>
                 </div>
-                <div>
+                <div className="cursor-pointer">
                   <ChevronDown size={18} strokeWidth={1.5} />
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-1 lg-laptop:gap-2">
+              <div
+                className="flex items-center justify-center gap-1 lg-laptop:gap-2"
+                onClick={showSearch}
+              >
                 <div className="hidden lg-laptop:block">
-                  <p className="text-sm hover:underline hover:decoration-2">
+                  <p className="text-sm cursor-pointer hover:underline hover:decoration-2">
                     Search
                   </p>
                 </div>
-                <div>
+                <div className="cursor-pointer">
                   <Search size={18} strokeWidth={1.5} />
                 </div>
               </div>
               <div className="flex items-center justify-center gap-1">
                 <div className="hidden lg-laptop:block">
-                  <p className="text-sm hover:underline hover:decoration-2">
+                  <p className="text-sm cursor-pointer hover:underline hover:decoration-2">
                     Cart
                   </p>
                 </div>
-                <div>
+                <div className="cursor-pointer">
                   <ShoppingCart size={18} strokeWidth={1.5} />
                 </div>
               </div>
               <div className="flex items-center justify-center gap-1">
                 <div className="hidden lg-laptop:block">
-                  <p className="text-sm hover:underline hover:decoration-2">
+                  <p className="text-sm cursor-pointer hover:underline hover:decoration-2">
                     Sign in
                   </p>
                 </div>
-                <div>
+                <div className="cursor-pointer">
                   <CircleUserRound size={30} strokeWidth={1} />
                 </div>
               </div>
@@ -331,6 +342,7 @@ const HeaderNavigation = ({ showSearch }) => {
           </nav>
         </header>
       </div>
+      {dropdown && <Dropdown />}
     </>
   );
 };
