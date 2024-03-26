@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { ArrowUp } from "lucide-react";
 
-//Function Based Component
+//Function-Based Component
 const GrayButton = (props) => {
   // props-->{btnText}
   return (
