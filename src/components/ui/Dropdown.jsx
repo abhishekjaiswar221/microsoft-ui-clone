@@ -94,7 +94,7 @@ const Dropdown = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center justify-center w-full h-11 bg-[#e6e6e6] border-b border-black">
+        <div className="flex items-center justify-center w-full h-11 bg-[#e6e6e6]">
           <h1 className="text-sm uppercase">View Sitemap </h1>
           <div>
             <ChevronRight size={24} strokeWidth={1} />

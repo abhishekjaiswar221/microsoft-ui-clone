@@ -7,6 +7,7 @@ import {
   CircleUserRound,
   X,
   ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import microsoftLogo from "../../assets/images/microsoft-logo.png";
@@ -302,7 +303,11 @@ const HeaderNavigation = ({ showSearch }) => {
                   </p>
                 </div>
                 <div className="cursor-pointer">
-                  <ChevronDown size={18} strokeWidth={1.5} />
+                  {dropdown ? (
+                    <ChevronUp size={18} strokeWidth={1.5} />
+                  ) : (
+                    <ChevronDown size={18} strokeWidth={1.5} />
+                  )}
                 </div>
               </div>
               <div

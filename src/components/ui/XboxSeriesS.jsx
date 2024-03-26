@@ -1,5 +1,5 @@
-import xboxSeriesS from "../../assets/images/xbox-series-s.jpg";
 import BlueButton from "./BlueButton";
+import xboxSeriesS from "../../assets/images/xbox-series-s.jpg";
 
 const XboxSeriesS = () => {
   return (

@@ -247,13 +247,13 @@ const Home = () => {
         </div>
         <div className="flex flex-row gap-5">
           <div>
-            <Facebook size={26} strokeWidth={2} />
+            <Facebook className="cursor-pointer" size={26} strokeWidth={2} />
           </div>
           <div>
-            <Twitter size={26} strokeWidth={2} />
+            <Twitter className="cursor-pointer" size={26} strokeWidth={2} />
           </div>
           <div>
-            <Youtube size={26} strokeWidth={2} />
+            <Youtube className="cursor-pointer" size={26} strokeWidth={2} />
           </div>
         </div>
       </div>

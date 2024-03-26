@@ -5,7 +5,7 @@ import microsoftLogo from "../../assets/images/microsoft-logo.png";
 const SearchBar = ({ hideSearch }) => {
   return (
     <>
-      <div className="flex items-center justify-center gap-2 h-14 sm-laptop:px-10 lg-laptop:px-20">
+      <div className="flex items-center justify-center gap-2 px-3 h-14 sm-laptop:px-10 lg-laptop:px-20">
         <div className="hidden pr-3 lg-laptop:pr-5 sm-laptop:block">
           <picture>
             <img
