@@ -46,6 +46,58 @@ const Home = () => {
     hideNavigation();
   });
 
+  const productObj1 = [
+    {
+      imgSrc: surfaceLaptop5,
+      heading: "Surface Laptop 5",
+      desc: "Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.",
+      btnText: "Learn more",
+    },
+    {
+      imgSrc: surfaceStudio,
+      heading: "Surface Laptop Studio",
+      desc: "Flex your creative muscle on the most powerful Surface Laptop. Now available with Windows 11.",
+      btnText: "Learn more",
+    },
+    {
+      imgSrc: xboxSeriesX,
+      heading: "Xbox Series X",
+      desc: "The fastest, most powerful Xbox ever.",
+      btnText: "Shop Xbox Series X",
+    },
+    {
+      imgSrc: microsoftLifeStyle,
+      heading: "Maximise the everyday with Microsoft 365",
+      desc: "Get secure cloud storage and innovative apps – all in one plan.",
+      btnText: "For one Person",
+    },
+  ];
+  const productObj2 = [
+    {
+      imgSrc: surfaceBusiness,
+      heading: "Surface for Business",
+      desc: "No matter what you do, there’s a Surface to help you do it.",
+      btnText: "Shop now",
+    },
+    {
+      imgSrc: microsoftTeams,
+      heading: "Get Microsoft Teams for free",
+      desc: "Online meetings, chat and shared cloud storage – all in one place.",
+      btnText: "Sign up for free",
+    },
+    {
+      imgSrc: windowsBusiness,
+      heading: "Windows 11 for business",
+      desc: "Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all.",
+      btnText: "Learn more",
+    },
+    {
+      imgSrc: azureAi,
+      heading: "Join the era of AI",
+      desc: "Create, communicate, and code with the latest Microsoft AI solutions.",
+      btnText: "Explore AI Solutions",
+    },
+  ];
   return (
     <>
       {/* Header Navigation */}
@@ -143,44 +195,17 @@ const Home = () => {
 
       {/* Product Cards */}
       <div className="flex flex-wrap items-center justify-center gap-10 my-8 lg-tablet:gap-6">
-        <div id="product-card1">
-          <ProductCard
-            imgSrc={surfaceLaptop5}
-            heading={"Surface Laptop 5"}
-            desc={
-              "Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11."
-            }
-            btnText="Learn more"
-          />
-        </div>
-        <div id="product-card2">
-          <ProductCard
-            imgSrc={surfaceStudio}
-            heading={"Surface Laptop Studio"}
-            desc={
-              "Flex your creative muscle on the most powerful Surface Laptop. Now available with Windows 11."
-            }
-            btnText="Learn more"
-          />
-        </div>
-        <div id="product-card3">
-          <ProductCard
-            imgSrc={xboxSeriesX}
-            heading={"Xbox Series X"}
-            desc={"The fastest, most powerful Xbox ever."}
-            btnText="Shop Xbox Series X"
-          />
-        </div>
-        <div id="product-card4">
-          <ProductCard
-            imgSrc={microsoftLifeStyle}
-            heading={"Maximise the everyday with Microsoft 365"}
-            desc={
-              "Get secure cloud storage and innovative apps – all in one plan."
-            }
-            btnText="For one Person"
-          />
-        </div>
+        {productObj1.map(({ imgSrc, heading, desc, btnText }, index) => {
+          return (
+            <ProductCard
+              key={index}
+              imgSrc={imgSrc}
+              heading={heading}
+              desc={desc}
+              btnText={btnText}
+            />
+          );
+        })}
       </div>
       {/* Product Cards */}
 
@@ -196,46 +221,17 @@ const Home = () => {
           For business
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-10 lg-tablet:gap-6">
-          <div id="product-card1">
-            <ProductCard
-              imgSrc={surfaceBusiness}
-              heading={"Surface for Business"}
-              desc={
-                "No matter what you do, there’s a Surface to help you do it."
-              }
-              btnText="Shop now"
-            />
-          </div>
-          <div id="product-card2">
-            <ProductCard
-              imgSrc={microsoftTeams}
-              heading={"Get Microsoft Teams for free"}
-              desc={
-                "Online meetings, chat and shared cloud storage – all in one place."
-              }
-              btnText="Sign up for free"
-            />
-          </div>
-          <div id="product-card3">
-            <ProductCard
-              imgSrc={windowsBusiness}
-              heading={"Windows 11 for business"}
-              desc={
-                "Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all."
-              }
-              btnText="Learn more"
-            />
-          </div>
-          <div id="product-card4">
-            <ProductCard
-              imgSrc={azureAi}
-              heading={"Join the era of AI"}
-              desc={
-                "Create, communicate, and code with the latest Microsoft AI solutions."
-              }
-              btnText="Explore AI Solutions"
-            />
-          </div>
+          {productObj2.map(({ imgSrc, heading, desc, btnText }, index) => {
+            return (
+              <ProductCard
+                key={index}
+                imgSrc={imgSrc}
+                heading={heading}
+                desc={desc}
+                btnText={btnText}
+              />
+            );
+          })}
         </div>
       </div>
       {/* Business Product Cards */}
