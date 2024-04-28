@@ -121,7 +121,7 @@ const Home = () => {
         className="flex items-center justify-center my-16"
       >
         <div className="flex flex-wrap items-center justify-center gap-8 w-60 lg-mobile:w-fit">
-          <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-2">
             <picture>
               <img
                 className="w-10 h-10"
